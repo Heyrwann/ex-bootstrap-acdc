@@ -1,15 +1,402 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AC/DC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        @font-face {
+            font-family: "Hard Rock";
+            src: url(fonts/HARD_ROCK.ttf);
+        }
+
+        @font-face {
+            font-family: "Rocknroll";
+            src: url(fonts/rocknroll_typo_crazy.ttf);
+        }
+
+        @font-face {
+            font-family: "The Dark";
+            src: url(fonts/TheDark.ttf);
+        }
+
+        nav,
+        h2 {
+            font-family: "The Dark", Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+        }
+
+        .btn {
+            font-family: "Rocknroll", Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            font-family: "Hard Rock", Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+        }
+
+        input.form-control,
+        textarea.form-control {
+            background-color: white;
+        }
+
+        input.form-control::placeholder,
+        textarea.form-control::placeholder {
+            color: #dc3545;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-black">
+    <header class="container-fluid">
+        <!-- Navigation -->
+        <nav class="fixed-top navbar navbar-expand-lg col-sm-3 col-lg-5 bg-dark p-2">
+            <a class="navbar-brand" href="#">
+                AC<i class="bi bi-lightning-fill text-danger"></i>CD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Membres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Discographie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Agenda des Concerts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
+
+        <!-- Carroussel -->
+        <section class="mt-5 pt-5">
+            <div id="carouselExample" class="carousel">
+                <div class="carousel-inner container">
+                    <div class="carousel-item active">
+                        <img src="img/ac-dc-1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/ac-dc-2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/ac-dc-3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- Les membres du groupe -->
+        <section class="container-fluid mt-5">
+            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les membres du groupe --
+            </h2>
+            <div class="row row-cols-sm-2 row-cols-lg-5 justify-content-center">
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure w-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/brian-johnson.png"
+                                class="figure-img rounded border border-4 border-white object-fit-cover"
+                                alt="Brian Johnson">
+                        </div>
+                        <figcaption class="figure-caption">Brian Johnson (Chant)</figcaption>
+                    </figure>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure w-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/angus-young.png"
+                                class="figure-img rounded border border-4 border-white object-fit-cover"
+                                alt="Angus Young">
+                        </div>
+
+                        <figcaption class="figure-caption">Angus Young (Guitare Solo)</figcaption>
+                    </figure>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure w-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/steve-young.png"
+                                class="figure-img rounded border border-4 border-white object-fit-cover"
+                                alt="Steve Young">
+                        </div>
+
+                        <figcaption class="figure-caption">Steve Young (Guitare)</figcaption>
+                    </figure>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure w-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/cliff-williams.png"
+                                class="figure-img rounded border border-4 border-white object-fit-cover"
+                                alt="Cliff Williams">
+                        </div>
+                        <figcaption class="figure-caption">Cliff Williams (Basse)</figcaption>
+                    </figure>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <figure class="figure w-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/chris-slade.png"
+                                class="figure-img rounded border border-4 border-white object-fit-cover"
+                                alt="Chris Slade">
+                        </div>
+                        <figcaption class="figure-caption">Chris Slade (Batterie)</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- La discographie -->
+        <section class="container mx-auto mt-5">
+            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- La Discographie --</h2>
+            <!-- 9 Bootstrap cards -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/High-voltage-1975.jpg" alt="High-voltage-1975">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1975 : High Voltage</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Highway-to-hell-1979.jpg"
+                            alt="Highway-to-hell-1979">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1979 : Highway to Hell</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Back-in-black-1980.jpg"
+                            alt="Back-in-black-1980">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1980 : Back in Black</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Who-made-who-1986.jpg" alt="Who-made-who-1986">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1986 : Who made Who</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Blow-up-your-video-1988.jpg"
+                            alt="Blow-up-your-video-1988">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1988 : Blow up your Video</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Razor-edge-1990.jpg" alt="Razor-edge-1990">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1990 : Razor's Edge</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Ballbreaker-1995.jpg" alt="Ballbreaker-1995">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">1995 : BallBreaker</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Stiff-upper-lip-2000.jpg"
+                            alt="Stiff-upper-lip-2000">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">2000 : Stiff Upper Lip</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="img/Discographie/Black-ice-2008.jpg" alt="Black-ice-2008">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">2008 : Black Ice</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Les dates de concerts -->
+        <section class="container mt-5">
+            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les dates de concerts --
+            </h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-danger">Date</th>
+                        <th class="text-danger">Heure</th>
+                        <th class="text-danger">Salle</th>
+                        <th class="text-danger">Ville</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider text-danger">
+                    <tr>
+                        <td>08/06/2000</td>
+                        <td>21:00</td>
+                        <td>Stade de France</td>
+                        <td>Paris</td>
+                    </tr>
+                    <tr>
+                        <td>12/05/2002</td>
+                        <td>21:00</td>
+                        <td>Esplanade</td>
+                        <td>Singapour</td>
+                    </tr>
+                    <tr>
+                        <td>18/09/2009</td>
+                        <td>20:30</td>
+                        <td>Opera</td>
+                        <td>Sydney</td>
+                    </tr>
+                    <tr>
+                        <td>12/09/2021</td>
+                        <td>20:30</td>
+                        <td>Massey Hall</td>
+                        <td>Toronto</td>
+                    </tr>
+                    <tr>
+                        <td>12/09/2022</td>
+                        <td>20:30</td>
+                        <td>Madison Square Garden</td>
+                        <td>New York</td>
+                    </tr>
+                    <tr>
+                        <td>08/06/2023</td>
+                        <td>21:30</td>
+                        <td>Stade de France</td>
+                        <td>Paris</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulaire de contact -->
+        <section class="container mt-5">
+            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Contact --</h2>
+            <form class="w-50 mx-auto">
+                <div class="d-flex gap-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Prénom" aria-label="Prenom">
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                </div>
+                <div class="input-group mb-3">
+                    <textarea class="form-control" placeholder="Votre message" aria-label="Votre message"></textarea>
+                </div>
+                <div class="d-flex justify-content-center gap-3">
+                    <button type="submit" class="btn btn-danger">Envoyer</button>
+                    <button type="submit" class="btn btn-danger">Annuler</button>
+                </div>
+            </form>
+        </section>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
