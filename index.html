@@ -48,13 +48,18 @@
         textarea.form-control::placeholder {
             color: #dc3545;
         }
+
+        .fit-content {
+            width: fit-content;
+            block-size: fit-content;
+        }
     </style>
 </head>
 
 <body class="bg-black">
     <header class="container-fluid">
         <!-- Navigation -->
-        <nav class="fixed-top navbar navbar-expand-lg col-sm-3 col-lg-5 bg-dark p-2">
+        <nav class="fixed-top navbar navbar-expand-lg bg-dark p-2 fit-content">
             <a class="navbar-brand" href="#">
                 AC<i class="bi bi-lightning-fill text-danger"></i>CD
             </a>
@@ -68,16 +73,16 @@
                         <a class="nav-link text-danger" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">Membres</a>
+                        <a class="nav-link text-danger" href="#membres">Membres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">Discographie</a>
+                        <a class="nav-link text-danger" href="#discographie">Discographie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">Agenda des Concerts</a>
+                        <a class="nav-link text-danger" href="#concerts">Agenda des Concerts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">Contact</a>
+                        <a class="nav-link text-danger" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -115,9 +120,10 @@
     <main>
         <!-- Les membres du groupe -->
         <section class="container-fluid mt-5">
-            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les membres du groupe --
+            <h2 class="text-center" id="membres">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les membres du
+                groupe --
             </h2>
-            <div class="row row-cols-sm-2 row-cols-lg-5 justify-content-center">
+            <div class="row row-cols-2 row-cols-lg-5 justify-content-center">
                 <div class="col d-flex justify-content-center">
                     <figure class="figure w-100">
                         <div class="ratio ratio-1x1">
@@ -176,11 +182,12 @@
 
         <!-- La discographie -->
         <section class="container mx-auto mt-5">
-            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- La Discographie --</h2>
+            <h2 class="text-center" id="discographie">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- La
+                Discographie --</h2>
             <!-- 9 Bootstrap cards -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/High-voltage-1975.jpg" alt="High-voltage-1975">
                         <div class="card-body">
                             <p class="card-title text-danger fw-semibold">1975 : High Voltage</p>
@@ -194,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Highway-to-hell-1979.jpg"
                             alt="Highway-to-hell-1979">
                         <div class="card-body">
@@ -209,7 +216,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Back-in-black-1980.jpg"
                             alt="Back-in-black-1980">
                         <div class="card-body">
@@ -224,7 +231,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Who-made-who-1986.jpg" alt="Who-made-who-1986">
                         <div class="card-body">
                             <p class="card-title text-danger fw-semibold">1986 : Who made Who</p>
@@ -238,7 +245,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Blow-up-your-video-1988.jpg"
                             alt="Blow-up-your-video-1988">
                         <div class="card-body">
@@ -253,7 +260,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Razor-edge-1990.jpg" alt="Razor-edge-1990">
                         <div class="card-body">
                             <p class="card-title text-danger fw-semibold">1990 : Razor's Edge</p>
@@ -267,7 +274,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Ballbreaker-1995.jpg" alt="Ballbreaker-1995">
                         <div class="card-body">
                             <p class="card-title text-danger fw-semibold">1995 : BallBreaker</p>
@@ -281,7 +288,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Stiff-upper-lip-2000.jpg"
                             alt="Stiff-upper-lip-2000">
                         <div class="card-body">
@@ -296,10 +303,38 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card bg-light">
+                    <div class="card bg-light px-2">
                         <img class="card-img-top" src="img/Discographie/Black-ice-2008.jpg" alt="Black-ice-2008">
                         <div class="card-body">
                             <p class="card-title text-danger fw-semibold">2008 : Black Ice</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light px-2">
+                        <img class="card-img-top" src="img/Discographie/Rock-or-Bust-2014.jpg" alt="Rock-or-Bust-2014">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">2014 : Rock or Bust</p>
+                            <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Blanditiis
+                                magni
+                                explicabo, aperiam
+                                accusantium iure laboriosam?</p>
+                            <a href="#" class="btn btn-danger">Lire plus ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light px-2">
+                        <img class="card-img-top" src="img/Discographie/Power-up-2020.jpg" alt="Power-up-2020">
+                        <div class="card-body">
+                            <p class="card-title text-danger fw-semibold">2020 : Power Up</p>
                             <p class="card-text text-dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Blanditiis
                                 magni
@@ -314,7 +349,8 @@
 
         <!-- Les dates de concerts -->
         <section class="container mt-5">
-            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les dates de concerts --
+            <h2 class="text-center" id="concerts">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Les dates de
+                concerts --
             </h2>
             <table class="table table-hover">
                 <thead>
@@ -367,9 +403,9 @@
         </section>
 
         <!-- Formulaire de contact -->
-        <section class="container mt-5">
-            <h2 class="text-center">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Contact --</h2>
-            <form class="w-50 mx-auto">
+        <section class="container mt-5 row justify-content-center mx-auto">
+            <h2 class="text-center" id="contact">AC<i class="bi bi-lightning-fill text-danger"></i>CD -- Contact --</h2>
+            <form class="col-10 col-lg-6">
                 <div class="d-flex gap-4">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Nom" aria-label="Nom">
